@@ -134,3 +134,7 @@ LOGOUT_URL = 'logout'
 
 # Send Email - Console backend
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Serve media files uploaded by users
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
