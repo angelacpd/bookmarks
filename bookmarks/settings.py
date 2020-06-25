@@ -25,7 +25,7 @@ SECRET_KEY = '6+1v1kk_mo#7kqdu!oej*l)(=z*#$547%c8ssqj+vyz&x^fqoj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mysite.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Third parties
+    'social_django',
 ]
 
 MIDDLEWARE = [
