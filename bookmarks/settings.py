@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Third parties
+    'django_extensions',
     'social_django',
 ]
 
@@ -111,6 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
+    'social_core.backends.facebook.FacebookOAuth2',
 ]
 
 
@@ -143,6 +145,13 @@ LOGOUT_URL = 'logout'
 # Send Email - Console backend
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+
 # Serve media files uploaded by users
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+
+# Authenticate user using Facebook Key
+SOCIAL_AUTH_FACEBOOK_KEY = ''    # Facebook App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = ''    # Facebook App Secret
+# SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']  # Extra permission
