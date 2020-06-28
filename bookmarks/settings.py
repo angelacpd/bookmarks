@@ -113,6 +113,7 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
     'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
 ]
 
 
@@ -155,3 +156,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 SOCIAL_AUTH_FACEBOOK_KEY = ''    # Facebook App ID
 SOCIAL_AUTH_FACEBOOK_SECRET = ''    # Facebook App Secret
 # SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']  # Extra permission
+
+# Authenticate user using Twitter Key
+SOCIAL_AUTH_TWITTER_KEY = ''   # Twitter API Key
+SOCIAL_AUTH_TWITTER_SECRET = ''   # Twitter API Secret
