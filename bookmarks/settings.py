@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
     # Third parties
     'django_extensions',
+    'easy_thumbnails',
     'social_django',
 
     # Created
@@ -154,6 +155,10 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # Serve media files uploaded by users
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+
+# # Easy-thumbnails
+# THUMBNAIL_DEBUG = True
 
 
 # Authenticate user using Facebook Key
