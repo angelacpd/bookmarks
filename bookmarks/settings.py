@@ -51,6 +51,7 @@ INSTALLED_APPS = [
 
     # Created
     'images.apps.ImagesConfig',
+    'actions.apps.ActionsConfig',
 ]
 
 MIDDLEWARE = [
