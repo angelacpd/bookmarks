@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
+from django.urls import reverse_lazy
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -152,7 +154,7 @@ LOGOUT_URL = 'logout'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
-# Serve media files uploaded by users
+# Serve media files uploaded by user
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
@@ -173,3 +175,8 @@ SOCIAL_AUTH_TWITTER_SECRET = ''   # Twitter API Secret
 # Authenticate user using Google Key
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = ''  # Google Consumer Key
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = ''   # Google Consumer Secret
+
+# Return the user_detail URL for the given user.
+ABSOLUTE_URL_OVERRIDES = {
+    'auth.user': lambda u: reverse_lazy('user_detail', args=[u.username])
+}
