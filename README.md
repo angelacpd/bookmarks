@@ -10,4 +10,4 @@ Django authentication framework based on the book "Django 3 by example".
 * Ajax
 * Redis
 
--
+*
